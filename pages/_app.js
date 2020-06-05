@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import AuthExample from "../router";
 
 const DynamicComponentWithNoSSR = dynamic(
   () => import("../components/layout"),
@@ -8,7 +9,7 @@ const DynamicComponentWithNoSSR = dynamic(
 export default function MyApp({ Component, pageProps }) {
   return (
     <DynamicComponentWithNoSSR>
-      <Component {...pageProps} />
+      <AuthExample {...pageProps} />
     </DynamicComponentWithNoSSR>
   );
 }
